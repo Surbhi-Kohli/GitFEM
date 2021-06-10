@@ -90,3 +90,28 @@ tree .git
 ├── heads
 
 ```
+
+### WE NEED SOMETHING ELSE AS WELL IN THE BLOB
+The blob is missing some information!
+    
+    ➤ filenames
+    ➤ directory structures
+This information is critical especially when we are working with files and not just some strngs inputted by user(as in above examples).
+So if we save a file as a blob ,how do we know what that file was called and the directory it was stored in.
+Git stores this information in a tree.
+
+### TREE
+a tree contains pointers (using SHA1):
+
+    ➤ to blobs
+    ➤ to other trees
+       and metadata:
+    ➤ type of pointer (blob or tree)
+    ➤ filename or directory name
+    ➤ mode (executable file, symbolic link, …)
+    
+  |Tree     |<size>     |  
+  | \0                  |
+  |blob|8ab68 |hello.txt|
+  |tree|a14ca |copies   |
+
