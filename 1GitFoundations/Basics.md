@@ -8,11 +8,11 @@
 ➤ You can use the key to retrieve the content.
 
 THE KEY - SHA1
-➤ Is a cryptographic hash function.
-➤ Given a piece of data, it produces a 40-digit hexadecimal
-number.
-➤ This value should always be the same if the given input is the
- same.-So when u run git log,you see a lot of 40 digit hexa numbers-->those are Sha1
+ ➤ Is a cryptographic hash function.
+ ➤ Given a piece of data, it produces a 40-digit hexadecimal
+    number. 
+ ➤ This value should always be the same if the given input is the
+    same.-So when u run git log,you see a lot of 40 digit hexa numbers-->those are Sha1
  
  Such systems are also called content addressable systems,thats becoz u use content to generate the key
  
@@ -23,20 +23,22 @@ number.
  
  ### Git blob
  THE VALUE - BLOB
-➤ git stores the compressed data in a blob, along with metadata in
-a header:
-➤ the identifier blob
-➤ the size of the content
-➤ \0 delimiter
-➤ content
+  ➤ git stores the compressed data in a blob, along with metadata in
+    a header:
+  ➤ the identifier blob
+  ➤ the size of the content
+  ➤ \0 delimiter
+  ➤ content
 /*
+
 |--------------|
 |blob | 14     | 
 |--------------|
 | \0           |
 | Hello World! |
 |--------------|
- */
+
+*/
 ### UNDER THE HOOD - GIT HASH-OBJECT
 
 Asking Git for the SHA1 of contents:
