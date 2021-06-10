@@ -23,22 +23,22 @@ THE KEY - SHA1
  
  ### Git blob
  THE VALUE - BLOB
-  ➤ git stores the compressed data in a blob, along with metadata in
-    a header:
-  ➤ the identifier blob
-  ➤ the size of the content
-  ➤ \0 delimiter
-  ➤ content
-/*
+     ➤ git stores the compressed data in a blob, along with metadata in
+        a header:
+     ➤ the identifier blob
+     ➤ the size of the content
+     ➤ \0 delimiter
+     ➤ content
 
-|--------------|
+
+|-----|--------|
 |blob | 14     | 
-|--------------|
+|-----|--------|
 | \0           |
 | Hello World! |
 |--------------|
 
-*/
+
 ### UNDER THE HOOD - GIT HASH-OBJECT
 
 Asking Git for the SHA1 of contents:
