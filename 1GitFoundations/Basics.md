@@ -104,14 +104,23 @@ Git stores this information in a tree.
 a tree contains pointers (using SHA1):
 
     ➤ to blobs
-    ➤ to other trees
-       and metadata:
+    ➤ to other trees //subdirectories can be nested
+       and metadata:  
     ➤ type of pointer (blob or tree)
     ➤ filename or directory name
     ➤ mode (executable file, symbolic link, …)
     
-  |Tree     |<size>     |  
+  |Tree     |<size>     | 
+  |---------------------|
   | \0                  |
+  |---------------------|
   |blob|8ab68 |hello.txt|
   |tree|a14ca |copies   |
-
+```
+├── copies
+│ └── hello-copy.txt
+└── hello.txt
+1 directory, 2 files
+    
+    ```
+***  Git doesnt let u store empty directory---->limitation with the staging area,as it only keeps track of files
