@@ -59,7 +59,34 @@ Generating the SHA1 of the contents, with metadata:
 It’s a Match! 
 
 ### Where does git store these objects?
- 
+
+```
+❯ git init
+Initialized empty Git repository in /Users/nina/projects/sample/.git/
+
+```
+.git directory contains data about our repository
  In the .git directory, git stores project information and its metadata into blob, tree, and commits objects, 
- with each object storing different parts of the project 
- like its content and folder structure.Deleting the .git directory, the information and history of the project are gone, but not the files of the project.
+ with each object storing different parts of the project like its content and folder structure.
+ Deleting the .git directory,the information and history of the project are gone, but not the files of the project.
+
+### Where are the blobs stored
+ 
+```
+echo 'Hello, World!' | git hash-object -w --stdin // -w flag means write
+tree .git
+.git
+├── HEAD
+├── config
+├── description
+├── info
+│ └── exclude
+├── objects //our blob is stored in objects
+│ ├── 8a  //the directory starts with the first 2 chars of the hash.
+│ │ └── b686eafeb1f44702738c8b0f24f2567c36da6d
+│ ├── info
+│ └── pack
+└── refs
+├── heads
+
+```
