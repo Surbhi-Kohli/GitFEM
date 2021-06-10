@@ -110,10 +110,9 @@ a tree contains pointers (using SHA1):
     ➤ filename or directory name
     ➤ mode (executable file, symbolic link, …)
     
-  |Tree     | <size>    | 
-  |---------|-----------|
-  | \0                  |
+  |Tree|      | <size>  | 
   |----|------|---------|
+  | \0                  |
   |blob|8ab68 |hello.txt|
   |tree|a14ca |copies   |
     
