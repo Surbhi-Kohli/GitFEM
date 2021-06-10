@@ -2,17 +2,17 @@
 
 ### HOW DOES GIT STORE INFORMATION?
 
-➤ At its core, git is like a key value store.
-➤ The Value = Data
-➤ The Key = Hash of the Data
-➤ You can use the key to retrieve the content.
+    ➤ At its core, git is like a key value store.
+    ➤ The Value = Data
+    ➤ The Key = Hash of the Data
+    ➤ You can use the key to retrieve the content.
 
 THE KEY - SHA1
-           
+       
          ➤ Is a cryptographic hash function.
          ➤ Given a piece of data, it produces a 40-digit hexadecimal
            number. 
-        ➤ This value should always be the same if the given input is the
+         ➤ This value should always be the same if the given input is the
          same.-So when u run git log,you see a lot of 40 digit hexa numbers-->those are Sha1
  
  Such systems are also called content addressable systems,thats becoz u use content to generate the key
@@ -36,7 +36,7 @@ THE KEY - SHA1
 
 
 |blob | 14     | 
-|     |        |
+|-----|------- |
 | \0           |
 | Hello World! |
 
@@ -57,6 +57,9 @@ Generating the SHA1 of the contents, with metadata:
 8ab686eafeb1f44702738c8b0f24f2567c36da6d
 ```
 It’s a Match! 
+
+### Where does git store these objects?
  
- In the .git directory, git stores project information and its metadata into blob, tree, and commits objects, with each object storing different parts of the project 
+ In the .git directory, git stores project information and its metadata into blob, tree, and commits objects, 
+ with each object storing different parts of the project 
  like its content and folder structure.Deleting the .git directory, the information and history of the project are gone, but not the files of the project.
