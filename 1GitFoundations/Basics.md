@@ -110,7 +110,7 @@ a tree contains pointers (using SHA1):
     ➤ filename or directory name
     ➤ mode (executable file, symbolic link, …)
     
-  |Tree|      | <size>  | 
+  |Tree|      |<size-14>| 
   |----|------|---------|
   | \0                  |
   |blob|8ab68 |hello.txt|
@@ -124,3 +124,20 @@ a tree contains pointers (using SHA1):
     
     ```
 ***  Git doesnt let u store empty directory---->limitation with the staging area,as it only keeps track of files
+
+    ///Git deltassssssssssssssssssssss
+    
+## Commits
+    
+###    COMMIT OBJECT
+    
+a commit points to:
+                            
+    ➤ a tree
+       and contains metadata:
+    ➤ author and committer
+    ➤ date
+➤ message
+➤ parent commit (one or more)
+the SHA1 of the commit is the hash of all this information
+    
